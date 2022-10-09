@@ -2,7 +2,7 @@ pipeline {
         agent {
            label {
                    label 'built-in'
-                   customWorkspace '/mnt/docker2/'
+                   customWorkspace '/mnt/docker2/1/'
                  }
              }
 
@@ -18,8 +18,8 @@ pipeline {
        stage ('git-clone'){
                steps {
                    sh "rm -rf *"
-                   sh "git clone https://github.com/tejasshete244/docker-volume.git -b master"
-                   sh "cp -r /mnt/docker2/docker-volume/index.html /var/lib/docker/volumes/vol1/_data/"
+                   sh "git clone https://github.com/tejasshete244/docker-volume.git -b 22Q1"
+                   sh "cp -r /mnt/docker2/1/docker-volume/index.html /var/lib/docker/volumes/vol1/_data/"
                    sh "chmod -R 777 /var/lib/docker/volumes/vol1/_data/"
                     
                  }
