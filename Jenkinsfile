@@ -18,6 +18,7 @@ pipeline {
        stage ('git-clone'){
                steps {
                    sh "git clone https://github.com/tejasshete244/docker-volume.git -b master"
+                   sh "chmod 777 /mnt/docker2/docker-volume/index.html"
                    sh "cp -r /mnt/docker2/docker-volume/index.html /var/lib/docker/volumes/vol1/_data/"
                     
                  }
