@@ -9,6 +9,7 @@ pipeline {
  stages {
        stage ('docker-volume'){
                steps {
+                   sh "docker volume rm vol1"
                    sh "docker volume create vol1"
                    }
                }
@@ -22,6 +23,8 @@ pipeline {
           }
         stage ('docker-run'){
                   steps {
+                     sh "docker stop 22Q1"
+                     sh "docker container rm 22Q1"
                      sh "docker run -itdp 80:80 --name 22Q1 -v vol1:/usr/local/apache2/htdocs httpd"
 
                       }
