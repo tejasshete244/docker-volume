@@ -18,8 +18,7 @@ pipeline {
                    sh "git clone https://github.com/tejasshete244/docker-volume.git -b master"
                    sh "cp -r /mnt/docker2/docker-volume/index.html /var/lib/docker/volumes/vol1/_data/"
                     
-                   }
-               }
+                 }
           }
         stage ('docker-run'){
                   steps {
