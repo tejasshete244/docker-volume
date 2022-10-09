@@ -9,10 +9,10 @@ pipeline {
  stages {
        stage ('docker-volume'){
                steps {
-                 /*  sh "docker stop 22Q2"
+                   sh "docker stop 22Q2"
                    sh "docker container rm 22Q2"
                    sh "docker volume rm vol2"
-                  */ sh "docker volume create vol2"
+                   sh "docker volume create vol2"
                    }
                }
        stage ('git-clone'){
