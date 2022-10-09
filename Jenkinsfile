@@ -26,7 +26,7 @@ pipeline {
           }
         stage ('docker-run'){
                   steps {
-                   sh "docker run -itdp 79:80 --name 22Q3 -v vol3:/usr/local/apache2/htdocs httpd"
+                   sh "docker run -itdp 70:80 --name 22Q3 -v vol3:/usr/local/apache2/htdocs httpd"
 
                       }
                       
